@@ -1,0 +1,15 @@
+name: Validate PowerShell package
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Parse script and test helpers and action blocks without remediation
+        shell: powershell
+        run: .\tests\Validate-Package.ps1
+      - name: Test read-only advanced audit and its report isolation
+        shell: powershell
+        run: .\tests\Validate-AdvancedAudit.ps1

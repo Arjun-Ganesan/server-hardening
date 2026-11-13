@@ -1,0 +1,32 @@
+{
+  "SchemaVersion": 1,
+  "PrimaryAccount": "pparker",
+  "Administrators": ["pparker", "tstark", "ppotts", "hhogan", "nfury", "mhill", "pcoulson"],
+  "Users": ["bbanner", "swilson", "sstrange", "slang", "cdanvers", "okoye", "kbishop", "ybelova", "jfoster", "nleeds", "mjwatson", "jtorres", "pcarter"],
+  "CreateUsers": [],
+  "ResetPasswordAccounts": ["hhogan"],
+  "RemoteDesktopUsers": [],
+  "PasswordPolicy": {
+    "MinimumLength": 14,
+    "GeneratedLength": 24,
+    "History": 24,
+    "MinimumAgeDays": 1,
+    "MaximumAgeDays": 60,
+    "LockoutThreshold": 5,
+    "LockoutMinutes": 30,
+    "ResetCounterMinutes": 30
+  },
+  "RequiredServiceNames": ["W3SVC", "WAS"],
+  "DisableServiceNames": ["RemoteRegistry", "RemoteAccess", "SSDPSRV", "upnphost", "SNMP", "SNMPTRAP", "TlntSvr", "SMTPSVC", "FTPSVC", "WMSVC", "TermService", "SessionEnv", "UmRdpService", "Spooler", "Fax", "simptcp", "SharedAccess", "WebClient"],
+  "RequiredFeatureNames": ["Web-Server", "Web-WebServer", "FS-FileServer"],
+  "RemoveFeatureNames": ["FS-SMB1", "PowerShell-V2", "Telnet-Client", "Telnet-Server", "TFTP-Client", "Simple-TCPIP", "SNMP-Service", "Fax", "Print-Internet", "PNRP", "WebDAV-Redirector", "Web-Ftp-Server"],
+  "AllowedShareNames": ["Handbook"],
+  "RemoveNonSystemShares": true,
+  "ProtectedApplicationPatterns": ["Google Chrome*", "Notepad++*", "WinSCP*", "7-Zip*", "*CCS*", "*CyberPatriot*", "*VMware Tools*", "*VirtualBox Guest Additions*"],
+  "ReviewApplicationPatterns": ["*BitTorrent*", "*uTorrent*", "*qBittorrent*", "*TeamViewer*", "*AnyDesk*", "*Ophcrack*", "*Hashcat*", "*John the Ripper*", "*Brutus*", "*Cain*", "*Netcat*", "*Wireshark*", "*Npcap*", "*Nmap*"],
+  "ApplicationPackageIds": ["Google.Chrome", "Notepad++.Notepad++", "WinSCP.WinSCP", "7zip.7zip"],
+  "AuditSubcategories": ["Logon", "Logoff", "Account Lockout", "Special Logon", "User Account Management", "Security Group Management", "Credential Validation", "Process Creation", "Audit Policy Change", "Authentication Policy Change", "Authorization Policy Change", "Security State Change", "Security System Extension", "System Integrity", "Other System Events", "File Share", "Detailed File Share", "File System", "Handle Manipulation", "Sensitive Privilege Use"],
+  "MediaExtensions": [".mp3", ".mp4", ".avi", ".mov", ".mkv", ".flac", ".wav", ".wma", ".ogg", ".m4a"],
+  "ReviewExecutableNames": ["nc.exe", "nc64.exe", "ncat.exe", "netcat.exe", "hashcat.exe", "ophcrack.exe", "brutus.exe", "bittorrent.exe", "utorrent.exe", "ccleaner.exe", "nmap.exe", "wireshark.exe"],
+  "LockAfterSeconds": 600
+}
